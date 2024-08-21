@@ -6,7 +6,7 @@ dotenv.config();
 const config: { [key: string]: Knex.Config } = {
   development: {
     client: "pg",
-    connection:"postgresql://kalvium_owner:JBUcD8VqCNH0@ep-hidden-wind-a1d23dxj.ap-southeast-1.aws.neon.tech/test?sslmode=require",
+    connection:process.env.CONNECTION_STRING,
     migrations: {
       directory: "./src/migrations",
     },
